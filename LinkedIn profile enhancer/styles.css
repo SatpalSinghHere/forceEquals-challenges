@@ -1,0 +1,61 @@
+#profile-enhancer-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 280px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-family: sans-serif;
+    padding: 15px;
+    z-index: 9999;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#toggle-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.score {
+    margin-top: 10px;
+}
+
+.progress {
+    background: #eee;
+    border-radius: 5px;
+    height: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: #4caf50;
+    height: 100%;
+    transition: width 0.3s;
+}
+
+.status {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
+    font-size: 0.9em;
+    color: white;
+}
+
+.status.target {
+    background-color: green;
+}
+
+.status.not\ target {
+    background-color: gray;
+}
