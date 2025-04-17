@@ -6,12 +6,14 @@ const bcrypt = require('bcrypt');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const SECRET_KEY = 'SECRET_KEY';
+const dotenv = require('dotenv')
+dotenv.config()
 
 // Middleware
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://satpalsinghalive1:9sgqDBxMAtswMvfc@cluster0.umvn1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
